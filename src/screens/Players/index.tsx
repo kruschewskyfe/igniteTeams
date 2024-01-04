@@ -85,7 +85,7 @@ export function Players(){
     async function groupRemove(){
         try {
             await groupRemoveByName(group);
-            console.log('tem que remover');
+            
             navigation.navigate('groups');
 
         } catch (error) {
@@ -99,7 +99,7 @@ export function Players(){
             `Deseja remover o grupo ${group}?`,
             [
                 { text: 'Não', style: 'cancel' },
-                { text: 'Sim', onPress: () => groupRemove },
+                { text: 'Sim', onPress: groupRemove },
             ]
         );
     }
